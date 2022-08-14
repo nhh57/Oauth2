@@ -1,5 +1,4 @@
 FROM openjdk:8
-RUN addgroup -S spring && adduser -S spring -G spring
 EXPOSE 8080
 USER spring:spring
 ENV JAR_FILE=*.jar
