@@ -1,13 +1,4 @@
-# syntax=docker/dockerfile:1
-# which officaial Java images?
-FROM openjdk:oraclelinux8
-#  working directory
-WORKDIR /app
-# Copy from your host(pc. laptop) to container
-COPY .mvn/ .mvn
-COPY mvnw pom.xml ./
-# Run this inside the image
-RUN ./mvnw dependency:go-offline
-COPY src ./src
-# run inside container
-CMD ["./mvnw","spring-boot:run"]
+FROM openjdk:8
+EXPOSE 8080
+ADD target/test-git-action.jar test-git-action.jar
+ENTRYPOINT ["java","-jar","/test-git-action.jar"]

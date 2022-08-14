@@ -26,9 +26,9 @@ jobs:
     - name: Build & push Docker Images
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
-        image: nhh0507 / test-git-action
+        image: nhh0507/test-git-action
         tags: latest
-        registry : docker.io
+        registry: docker.io
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
