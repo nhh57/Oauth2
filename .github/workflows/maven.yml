@@ -23,11 +23,11 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    - name: Build & push Docker Images
+    - name: Build & push Docker image
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: nhh0507/test-git-action
-        tags: latest
+        tags: v1.0.0
         registry: docker.io
         dockerfile: Dockerfile
         username: ${{ secrets.DOCKER_USERNAME }}
