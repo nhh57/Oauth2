@@ -2,8 +2,5 @@ FROM openjdk:8
 EXPOSE 8080
 USER spring:spring
 ENV JAR_FILE=*.jar
-ARG DEPENDENCY=target/dependency
-COPY ${DEPENDENCY}/BOOT-INF/lib /app/lib
-COPY ${DEPENDENCY}/META-INF /app/META-INF
-COPY ${DEPENDENCY}/BOOT-INF/classes /app
+COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/test-git-action.jar"]
