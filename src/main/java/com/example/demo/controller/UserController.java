@@ -47,6 +47,7 @@ public class UserController {
         user.setUsername(oauth2.getPrincipal().getAttribute("email"));
         user.setEmail(oauth2.getPrincipal().getAttribute("email"));
         Role role =  roleService.getRole("CUSTOMER");
+        System.out.println("hehehe");
         List<Role> roles = new ArrayList<>();
         roles.add(role);
         user.setRoles(Utils.convertListObjectToJsonArray(roles));
