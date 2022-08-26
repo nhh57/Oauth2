@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/oauth2
-    username: sa
-    password: admin
+    url: jdbc:mysql://awseb-e-brdma433y3-stack-awsebrdsdatabase-dg2fzfemlgtl.cvxkfytfaftd.us-east-1.rds.amazonaws.com:3306/Mockproject
+    username: root
+    password: admin123
   jpa:
     hibernate:
 #      ddl-auto: create
