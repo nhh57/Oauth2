@@ -72,4 +72,9 @@ public class UserController {
         response.setData(user2);
         return new ResponseEntity<BaseResponse>(response, HttpStatus.OK);
     }
+
+    @RequestMapping("/index")
+    public String hehe(){
+        return "hhihii";
+    }
 }
